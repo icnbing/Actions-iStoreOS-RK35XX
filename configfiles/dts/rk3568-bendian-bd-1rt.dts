@@ -4,8 +4,8 @@
 	interrupt-parent = <0x01>;
 	#address-cells = <0x02>;
 	#size-cells = <0x02>;
-	model = "BenDian One";
-	compatible = "bendian,bd-one\0rockchip,rk3568";
+	model = "BenDian bd-1rt";
+	compatible = "bendian,bd-1rt\0rockchip,rk3568";
 
 	ddr3-params {
 		version = <0x100>;
