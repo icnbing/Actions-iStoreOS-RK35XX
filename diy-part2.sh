@@ -8,8 +8,8 @@
 #===============================================
 
 # enable rk3568 model adc keys
-cp -f $GITHUB_WORKSPACE/configfiles/adc-keys.txt adc-keys.txt
-! grep -q 'adc-keys {' package/boot/uboot-rk35xx/src/arch/arm/dts/rk3568-easepi.dts && sed -i '/\"rockchip,rk3568\";/r adc-keys.txt' package/boot/uboot-rk35xx/src/arch/arm/dts/rk3568-easepi.dts
+# cp -f $GITHUB_WORKSPACE/configfiles/adc-keys.txt adc-keys.txt
+# ! grep -q 'adc-keys {' package/boot/uboot-rk35xx/src/arch/arm/dts/rk3568-easepi.dts && sed -i '/\"rockchip,rk3568\";/r adc-keys.txt' package/boot/uboot-rk35xx/src/arch/arm/dts/rk3568-easepi.dts
 
 # update ubus git HEAD
 cp -f $GITHUB_WORKSPACE/configfiles/ubus_Makefile package/system/ubus/Makefile
