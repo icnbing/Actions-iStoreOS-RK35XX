@@ -45,6 +45,18 @@ cp -f $GITHUB_WORKSPACE/configfiles/dts/rk3568-bendian-bd-1rt.dts target/linux/r
 
 
 
+echo -e "\\ndefine Device/bendian_bd-1rt
+\$(call Device/rk3568)
+  DEVICE_VENDOR := bendian
+  DEVICE_MODEL := bd-1rt
+  DEVICE_DTS := rk3568-bendian-bd-1rt
+  SUPPORTED_DEVICES += bendian,bd-1rt
+  DEVICE_PACKAGES := kmod-nvme kmod-scsi-core kmod-thermal kmod-switch-rtl8306 kmod-switch-rtl8366-smi kmod-switch-rtl8366rb kmod-switch-rtl8366s kmod-hwmon-pwmfan kmod-switch-rtl8367b swconfig kmod-swconfig
+endef
+TARGET_DEVICES += bendian_bd-1rt" >> target/linux/rockchip/image/rk35xx.mk
+
+
+
 # 修改uhttpd配置文件，启用nginx
 # sed -i "/.*uhttpd.*/d" .config
 # sed -i '/.*\/etc\/init.d.*/d' package/network/services/uhttpd/Makefile
