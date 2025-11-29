@@ -41,6 +41,9 @@ cp -f $GITHUB_WORKSPACE/configfiles/dts/rk3568-mrkaio-m68s.dts target/linux/rock
 cp -f $GITHUB_WORKSPACE/configfiles/dts/rk3568-mrkaio-m68s-plus.dts target/linux/rockchip/dts/rk3568/rk3568-mrkaio-m68s-plus.dts
 
 
+cp -f $GITHUB_WORKSPACE/configfiles/dts/rk3568-bendian-bd-1rt.dts target/linux/rockchip/dts/rk3568/rk3568-bendian-bd-1rt.dts 
+
+
 
 # 修改uhttpd配置文件，启用nginx
 # sed -i "/.*uhttpd.*/d" .config
@@ -82,4 +85,4 @@ git clone --depth=1 -b main https://github.com/xiaomeng9597/istoreos-settings pa
 
 
 # 定时限速插件
-git clone --depth=1 https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
+#git clone --depth=1 https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
